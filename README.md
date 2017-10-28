@@ -16,19 +16,19 @@ guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-grun
 Once you're familiar with that process, you may install this plugin with this command:
 
 ```sh
-npm install grunt-esdoc --save-dev
+npm install @vanruesc/grunt-esdoc
 ``` 
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks("grunt-esdoc");
+grunt.loadNpmTasks("@vanruesc/grunt-esdoc");
 ```
 
 
 ## Usage
 
-###### MyClass.js
+##### MyClass.js
 
 ```js
 /**
@@ -49,7 +49,7 @@ export default class MyClass {
 }
 ```
 
-###### Gruntfile.js
+##### Gruntfile.js
 
 ```js
 grunt.initConfig({
@@ -83,14 +83,12 @@ grunt.registerTask("default", ["lint", "test", "esdoc"]);
 All [ESDoc options](https://esdoc.org/manual/config.html) defined under `options` are passed to ESDoc.
 You may also specify additional plugin-specific options:
 
-##### Plugin Options
-
 | Option            | Description                                                                                                                     | Default |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------|---------|
 | coverageThreshold | Affects the color of the coverage report in the console. Has no effect if coverage is not available. Expressed as a percentage. | 100.0 |
 | verbose           | Enables exhaustive ESDoc logging.                                                                                               | false |
 
-##### Example Configuration
+#### Example Configuration
 
 ```js
 grunt.initConfig({
@@ -101,19 +99,17 @@ grunt.initConfig({
 				coverageThreshold: 95.0,
 				source: "./path/to/src",
 				destination: "./path/to/esdoc/output",
-				plugins: [
-					{
-						name: "esdoc-standard-plugin",
-						option: {
-							test: {
-								source: "./test/",
-								interfaces: ["describe", "it", "context", "suite", "test"],
-								includes: ["(spec|Spec|test|Test)\\.js$"],
-								excludes: ["\\.config\\.js$"]
-							}
+				plugins: [{
+					name: "esdoc-standard-plugin",
+					option: {
+						test: {
+							source: "./test/",
+							interfaces: ["suite", "test"],
+							includes: ["(spec|Spec|test|Test)\\.js$"],
+							excludes: ["\\.config\\.js$"]
 						}
 					}
-				]
+				}]
 			}
 		}
 	}
@@ -122,7 +118,7 @@ grunt.initConfig({
 
 Alternatively, you can specify a `config` path to a file containing the configuration options for ESDoc.
 
-###### esdoc.json
+##### esdoc.json
 
 ```js
 {
@@ -133,7 +129,7 @@ Alternatively, you can specify a `config` path to a file containing the configur
 }
 ```
 
-###### Gruntfile.js
+##### Gruntfile.js
 
 ```js
 grunt.initConfig({
