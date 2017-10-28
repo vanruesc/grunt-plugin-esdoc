@@ -1,7 +1,7 @@
 # vanruesc-grunt-esdoc
 
 [![Build status](https://travis-ci.org/vanruesc/vanruesc-grunt-esdoc.svg?branch=master)](https://travis-ci.org/vanruesc/vanruesc-grunt-esdoc)
-[![npm version](https://badge.fury.io/js/vanruesc-grunt-esdoc.svg)](https://badge.fury.io/js/vanruesc-grunt-esdoc)
+[![npm version](https://badge.fury.io/js/%40vanruesc%2Fgrunt-esdoc.svg)](https://badge.fury.io/js/%40vanruesc%2Fgrunt-esdoc)
 [![Dependencies](https://david-dm.org/vanruesc/vanruesc-grunt-esdoc.svg?branch=master)](https://david-dm.org/vanruesc/vanruesc-grunt-esdoc)
 
 A Grunt plugin for the ES2015+ documentation tool [ESDoc](https://esdoc.org/).
