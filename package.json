@@ -2,7 +2,7 @@
 	"name": "@vanruesc/grunt-esdoc",
 	"version": "0.0.0",
 	"description": "Integrates ESDoc into your Grunt build setup.",
-	"homepage": "https://github.com/vanruesc/grunt-esdoc",
+	"homepage": "https://github.com/vanruesc/vanruesc-grunt-esdoc",
 	"main": "tasks/grunt-esdoc.js",
 	"module": "src/index.js",
 	"license": "Zlib",
@@ -22,11 +22,11 @@
 
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/vanruesc/grunt-esdoc.git"
+		"url": "https://github.com/vanruesc/vanruesc-grunt-esdoc.git"
 	},
 
 	"bugs": {
-		"url": "https://github.com/vanruesc/grunt-esdoc/issues"
+		"url": "https://github.com/vanruesc/vanruesc-grunt-esdoc/issues"
 	},
 
 	"files": [
