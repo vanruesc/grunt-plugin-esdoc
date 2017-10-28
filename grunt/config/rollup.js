@@ -18,7 +18,7 @@ module.exports = {
 			banner: "<%= banner %>"
 		},
 		src: "<%= package.module %>",
-		dest: "tasks/<%= package.name %>.js"
+		dest: "tasks/grunt-esdoc.js"
 	}
 
 };

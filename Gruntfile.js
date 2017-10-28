@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 	const date = grunt.template.today("mmm dd yyyy");
 
 	// Load the implemented Grunt task.
-	grunt.loadTasks("tasks/@vanruesc");
+	grunt.loadTasks("tasks");
 
 	loadGruntConfig(grunt, {
 
