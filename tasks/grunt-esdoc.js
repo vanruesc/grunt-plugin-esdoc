@@ -1,5 +1,5 @@
 /**
- * @vanruesc/grunt-esdoc v0.0.1 build Oct 29 2017
+ * @vanruesc/grunt-esdoc v0.0.2 build Oct 29 2017
  * https://github.com/vanruesc/vanruesc-grunt-esdoc
  * Copyright 2017 Raoul van Rüschen, Zlib
  */
@@ -53,7 +53,7 @@ function registerESDocTask(grunt) {
 										var coverage = coverageReport.coverage;
 										var expected = coverageReport.expectCount;
 										var actual = coverageReport.actualCount;
-										var unsatisfactory = coverage < options.coverageThreshold;
+										var unsatisfactory = Number.parseFloat(coverage.replace("%", "")) < options.coverageThreshold;
 
 										grunt.log[unsatisfactory ? "warn" : "ok"]("Coverage: " + coverage);
 										grunt.log[unsatisfactory ? "warn" : "ok"]("Files: " + actual + "/" + expected);

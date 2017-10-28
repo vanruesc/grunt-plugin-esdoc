@@ -1,6 +1,6 @@
 {
 	"name": "@vanruesc/grunt-esdoc",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Integrates ESDoc into your Grunt build setup.",
 	"homepage": "https://github.com/vanruesc/vanruesc-grunt-esdoc",
 	"main": "tasks/grunt-esdoc.js",
