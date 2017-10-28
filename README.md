@@ -40,7 +40,7 @@ export default class MyClass {
 	/**
 	 * Description of the method.
 	 *
-	 * @param {Number} param - Description of the param.
+	 * @param {Number} param - Description of the parameter.
 	 * @return {Number} Description of the return value.
 	 */
 
@@ -87,8 +87,6 @@ You may also specify additional plugin-specific options:
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------|---------|
 | coverageThreshold | Affects the color of the coverage report in the console. Has no effect if coverage is not available. Expressed as a percentage. | 100.0 |
 | verbose           | Enables exhaustive ESDoc logging.                                                                                               | false |
-
-#### Example Configuration
 
 ```js
 grunt.initConfig({
