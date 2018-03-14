@@ -9,7 +9,7 @@ import path from "path";
 
 export default function registerESDocTask(grunt) {
 
-	grunt.registerMultiTask("esdoc", "ES6 Documentation tool: ESDoc", function() {
+	grunt.registerMultiTask("esdoc", "A documentation generator for JavaScript.", function() {
 
 		// Keep a reference to the original log function.
 		const log = console.log;
