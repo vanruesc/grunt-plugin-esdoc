@@ -54,12 +54,12 @@ export default class MyClass {
 ```js
 grunt.initConfig({
 	esdoc: {
+		options: {
+			plugins: [{
+				name: "esdoc-standard-plugin"
+			}]
+		},
 		compile: {
-			options: {
-				plugins: [{
-					"name": "esdoc-standard-plugin"
-				}]
-			},
 			src: "src",
 			dest: "docs"
 		}
@@ -93,22 +93,22 @@ You may also specify additional plugin-specific options:
 ```js
 grunt.initConfig({
 	esdoc: {
-		compile: {
-			options: {
-				verbose: true,
-				coverageThreshold: 95.0,
-				plugins: [{
-					name: "esdoc-standard-plugin",
-					option: {
-						test: {
-							source: "./test/",
-							interfaces: ["suite", "test"],
-							includes: ["(spec|Spec|test|Test)\\.js$"],
-							excludes: ["\\.config\\.js$"]
-						}
+		options: {
+			verbose: true,
+			coverageThreshold: 95.0,
+			plugins: [{
+				name: "esdoc-standard-plugin",
+				option: {
+					test: {
+						source: "./test/",
+						interfaces: ["suite", "test"],
+						includes: ["(spec|Spec|test|Test)\\.js$"],
+						excludes: ["\\.config\\.js$"]
 					}
-				}]
-			},
+				}
+			}]
+		},
+		compile: {
 			src: "./path/to/src",
 			dest: "./path/to/esdoc/output"
 		}
@@ -122,9 +122,9 @@ Alternatively, you can specify a `config` path to a file containing the configur
 
 ```js
 {
-	"coverageThreshold": 95.0,
 	"source": "src",
 	"destination": "docs",
+	"coverageThreshold": 95.0,
 	"plugins": [{"name": "esdoc-standard-plugin"}]
 }
 ```
