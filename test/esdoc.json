@@ -3,9 +3,7 @@
 	"coverageThreshold": 100.0,
 	"source": "./test/src",
 	"destination": "./test/docs",
-	"plugins": [
-		{
-			"name": "esdoc-standard-plugin"
-		}
-	]
+	"plugins": [{
+		"name": "esdoc-standard-plugin"
+	}]
 }
