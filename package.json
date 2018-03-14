@@ -1,6 +1,6 @@
 {
-	"version": "0.0.2",
 	"name": "grunt-plugin-esdoc",
+	"version": "1.0.0",
 	"description": "A plugin that integrates ESDoc into your Grunt build setup.",
 	"homepage": "https://github.com/vanruesc/grunt-plugin-esdoc",
 	"main": "tasks/grunt-plugin-esdoc.js",
