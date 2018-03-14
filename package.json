@@ -1,15 +1,14 @@
 {
 	"version": "0.0.2",
-	"description": "Integrates ESDoc into your Grunt build setup.",
 	"name": "grunt-plugin-esdoc",
+	"description": "A plugin that integrates ESDoc into your Grunt build setup.",
 	"homepage": "https://github.com/vanruesc/grunt-plugin-esdoc",
 	"main": "tasks/grunt-plugin-esdoc.js",
 	"module": "src/index.js",
 	"license": "Zlib",
 
 	"keywords": [
-		"grunt",
-		"plugin",
+		"gruntplugin",
 		"esdoc",
 		"documentation",
 		"generator"
