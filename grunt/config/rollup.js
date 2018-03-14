@@ -3,13 +3,8 @@ const babel = require("rollup-plugin-babel");
 module.exports = {
 
 	options: {
-		external: [
-			"esdoc",
-			"path"
-		],
-		plugins: [
-			babel()
-		]
+		external: ["esdoc", "path"],
+		plugins: [babel()]
 	},
 
 	task: {
@@ -18,7 +13,7 @@ module.exports = {
 			banner: "<%= banner %>"
 		},
 		src: "<%= package.module %>",
-		dest: "tasks/grunt-esdoc.js"
+		dest: "tasks/<%= package.name %>.js"
 	}
 
 };
