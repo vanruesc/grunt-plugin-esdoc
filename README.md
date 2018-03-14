@@ -1,8 +1,8 @@
-# vanruesc-grunt-esdoc
+# Grunt Plugin: ESDoc
 
-[![Build status](https://travis-ci.org/vanruesc/vanruesc-grunt-esdoc.svg?branch=master)](https://travis-ci.org/vanruesc/vanruesc-grunt-esdoc)
-[![npm version](https://badge.fury.io/js/%40vanruesc%2Fgrunt-esdoc.svg)](https://badge.fury.io/js/%40vanruesc%2Fgrunt-esdoc)
-[![Dependencies](https://david-dm.org/vanruesc/vanruesc-grunt-esdoc.svg?branch=master)](https://david-dm.org/vanruesc/vanruesc-grunt-esdoc)
+[![Build status](https://travis-ci.org/vanruesc/grunt-plugin-esdoc.svg?branch=master)](https://travis-ci.org/vanruesc/grunt-plugin-esdoc)
+[![npm version](https://badge.fury.io/js/grunt-plugin-esdoc.svg)](https://badge.fury.io/js/grunt-plugin-esdoc)
+[![Dependencies](https://david-dm.org/vanruesc/grunt-plugin-esdoc.svg?branch=master)](https://david-dm.org/vanruesc/grunt-plugin-esdoc)
 
 A Grunt plugin for the ES2015+ documentation tool [ESDoc](https://esdoc.org/).
 
@@ -16,13 +16,13 @@ guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-grun
 Once you're familiar with that process, you may install this plugin with this command:
 
 ```sh
-npm install @vanruesc/grunt-esdoc
+npm install grunt-plugin-esdoc
 ``` 
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks("@vanruesc/grunt-esdoc");
+grunt.loadNpmTasks("grunt-plugin-esdoc");
 ```
 
 
@@ -56,10 +56,12 @@ grunt.initConfig({
 	esdoc: {
 		compile: {
 			options: {
-				source: "src",
-				destination: "docs",
-				plugins: [{"name": "esdoc-standard-plugin"}]
-			}
+				plugins: [{
+					"name": "esdoc-standard-plugin"
+				}]
+			},
+			src: "src",
+			dest: "docs"
 		}
 	}
 });
@@ -85,8 +87,8 @@ You may also specify additional plugin-specific options:
 
 | Option            | Description                                                                                                                     | Default |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------|---------|
-| coverageThreshold | Affects the color of the coverage report in the console. Has no effect if coverage is not available. Expressed as a percentage. | 100.0 |
-| verbose           | Enables exhaustive ESDoc logging.                                                                                               | false |
+| coverageThreshold | Affects the color of the coverage report in the console. Has no effect if coverage is not available. Expressed as a percentage. | 100.0   |
+| verbose           | Enables exhaustive ESDoc logging.                                                                                               | false   |
 
 ```js
 grunt.initConfig({
@@ -95,8 +97,6 @@ grunt.initConfig({
 			options: {
 				verbose: true,
 				coverageThreshold: 95.0,
-				source: "./path/to/src",
-				destination: "./path/to/esdoc/output",
 				plugins: [{
 					name: "esdoc-standard-plugin",
 					option: {
@@ -108,7 +108,9 @@ grunt.initConfig({
 						}
 					}
 				}]
-			}
+			},
+			src: "./path/to/src",
+			dest: "./path/to/esdoc/output"
 		}
 	}
 });
@@ -140,6 +142,8 @@ grunt.initConfig({
 	}
 });
 ```
+
+Note that `src` and `dest` override `source` and `destination` if they are defined.
 
 
 ## Contributing
