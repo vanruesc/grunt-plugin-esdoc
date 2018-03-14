@@ -13,15 +13,15 @@ function generateDocumentation(grunt, options) {
 
 	if(options.source === null) {
 
-		grunt.fail.error("No source path specified");
+		grunt.fail.warn("No source path specified");
 
 	} else if(!grunt.file.exists(options.source)) {
 
-		grunt.fail.error("Invalid source path");
+		grunt.fail.warn("Invalid source path");
 
 	} else if(options.destination === null) {
 
-		grunt.fail.error("No destination path specified");
+		grunt.fail.warn("No destination path specified");
 
 	} else {
 
