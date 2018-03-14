@@ -11,8 +11,8 @@
 		"grunt",
 		"plugin",
 		"esdoc",
-		"ES6",
-		"documentation"
+		"documentation",
+		"generator"
 	],
 
 	"author": {
