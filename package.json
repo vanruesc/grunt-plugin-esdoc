@@ -50,8 +50,8 @@
 	},
 
 	"devDependencies": {
-		"@babel/core": "6.x.x",
-		"@babel/preset-env": "1.x.x",
+		"@babel/core": "7.x.x",
+		"@babel/preset-env": "7.x.x",
 		"esdoc-standard-plugin": "1.x.x",
 		"eslint-config-delta": "0.x.x",
 		"grunt": "1.x.x",
